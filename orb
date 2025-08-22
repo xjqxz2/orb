@@ -60,8 +60,6 @@ backup() {
 }
 
 restore() {
-	echo "功能未完成..."
-
 	local dir_source="$1"
 	local dir_dest="$2"
 	local dir_index=""
