@@ -24,7 +24,7 @@ backup() {
 
 
 	for i in {0..9}; do
-		if [ ! -d $i ]; then
+		if [ ! -d $dir_dest/$i ]; then
 			next=$i;
 			let pre=0;
 			if [ $next -gt 0 ]; then
