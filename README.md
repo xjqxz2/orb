@@ -16,13 +16,13 @@ This will backup `/home/www` to `/mnt/www`. At this time, in the backup director
 
 ### Restore
 
-Command: `orb -r /mnt/www /home/www`
+Command: `orb.sh -r /mnt/www /home/www`
 
 This will restore `/mnt/www/8` to `/home/www`.
 
 To select a specific version, such as version 1:
 
-`orb -r /mnt/www /home/www 1`
+`orb.sh -r /mnt/www /home/www 1`
 
 ## Acknowledgments
 
