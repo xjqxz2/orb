@@ -1,11 +1,13 @@
 #!/bin/bash
 
 usage() {
+	echo "orb.sh version v1.0.6"
 	echo "Usage: orb -b SOURCE_DIR DESTINATION_DIR"
-	echo "		 orb -r BACKUP_DIR RESTORE_DIR"
-	echo "-b	Perform a backup from SOURCE_DIR to DESTINATION_DIR"
-	echo "-r 	Restore data from BACKUP_DIR to RESTORE_DIR"
-	echo "-h	Display this help message"
+	echo "       orb -r BACKUP_DIR RESTORE_DIR"
+	echo "-b Perform a backup from SOURCE_DIR to DESTINATION_DIR"
+	echo "-r Restore data from BACKUP_DIR to RESTORE_DIR"
+	echo "-v Show version"
+	echo "-h Display this help message"
 }
 
 backup() {
@@ -94,7 +96,7 @@ restore() {
 
 }
 
-while getopts "b:r:h" opt; do
+while getopts "b:r:v:h" opt; do
 	case ${opt} in
 		b)
 			SOURCE_DIR="$2"
