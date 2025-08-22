@@ -24,4 +24,4 @@ Orb 是一个简单的备份轮转脚本，用于备份目录并保持多个版�
 
 ## 感谢
 
-感谢 Infong：[https://infong.me/](https://infong.me/)
+感谢 Infong：[https://github.com/infong](https://github.com/infong)
