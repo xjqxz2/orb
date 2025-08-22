@@ -2,8 +2,9 @@
 
 usage() {
 	echo "Usage: orb -b SOURCE_DIR DESTINATION_DIR"
+	echo "		 orb -r BACKUP_DIR RESTORE_DIR"
 	echo "-b	Perform a backup from SOURCE_DIR to DESTINATION_DIR"
-	echo "-r 	BACKUP_DIR to RESTORE_DIR Restore data from BACKUP_DIR to RESTORE_DIR"
+	echo "-r 	Restore data from BACKUP_DIR to RESTORE_DIR"
 	echo "-h	Display this help message"
 }
 
