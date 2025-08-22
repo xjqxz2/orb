@@ -26,4 +26,4 @@ To select a specific version, such as version 1:
 
 ## Acknowledgments
 
-Thanks to Infong: [https://github.com/infong](https://github.com/infong)
+Thanks to [Infong](https://github.com/infong) for the brilliant idea
