@@ -6,6 +6,7 @@ usage() {
 	echo "-b Perform a backup from SOURCE_DIR to DESTINATION_DIR"
 	echo "-r Restore data from BACKUP_DIR to RESTORE_DIR"
 	echo "-v Show version"
+	echo "-u Upgrade orb.sh"
 	echo "-h Display this help message"
 }
 
