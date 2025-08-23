@@ -1,7 +1,6 @@
 #!/bin/bash
 
 usage() {
-	echo "orb.sh version v1.0.6"
 	echo "Usage: orb -b SOURCE_DIR DESTINATION_DIR"
 	echo "       orb -r BACKUP_DIR RESTORE_DIR"
 	echo "-b Perform a backup from SOURCE_DIR to DESTINATION_DIR"
@@ -96,7 +95,20 @@ restore() {
 
 }
 
-while getopts "b:r:v:h" opt; do
+version() {
+	echo "v1.0.7"
+}
+
+upgrade() {
+	echo "Upgrading..."
+	installFile="/usr/local/bin/orb.sh"
+	latestFile="https://github.com/xjqxz2/orb/releases/latest/download/orb.sh"
+	curl -sS -o $installFile $latestFile 
+	chmod +x $installFile
+	echo "Upgrade ok!"
+}
+
+while getopts "b:r:vu" opt; do
 	case ${opt} in
 		b)
 			SOURCE_DIR="$2"
@@ -107,9 +119,6 @@ while getopts "b:r:v:h" opt; do
 				backup "$SOURCE_DIR" "$DEST_DIR"
 				exit 0
 			fi
-
-			# 若其中有一个为空，则出错
-			usage
 			;;
 		r)
 			DEST_DIR="$2"
@@ -120,17 +129,16 @@ while getopts "b:r:v:h" opt; do
 				restore "$DEST_DIR" "$SOURCE_DIR" "$INDEX"
 				exit 0
 			fi
-
-			usage
 			;;
-		h)
-			usage
+		v)
+			version
+			exit 0
 			;;
-		\?)
-			usage
+		u)
+			upgrade
+			exit 0
 			;;
-		:)
-			usage
-			;;
-	esac
+	esac	
 done
+
+usage
